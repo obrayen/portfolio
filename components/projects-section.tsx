@@ -1,15 +1,16 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { ExternalLink } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 export default function ProjectsSection() {
   const projects = [
     {
-      title: "Robot Line Follower",
+      title: "Mesin Absensi Arduino",
       description:
-        "Robot mengikuti jalur secara otomatis dengan sensor IR dan algoritma PID untuk navigasi yang presisi.",
-      image: "/robot-line-follower-with-sensors.png",
-      technologies: ["Arduino", "C++", "Sensor IR", "PID Control"],
+        "Mesin absensi otomatis berbasis ESP32 dengan sensor RFID untuk mencatat kehadiran secara cepat dan akurat.",
+      image: "/arduino-attendance-machine.png",
+      technologies: [
+        "Arduino","C++","RFID","Fingerprint Sensor","LCD/OLED",],
     },
     {
       title: "Smart Home Automation",
@@ -53,15 +54,21 @@ export default function ProjectsSection() {
       image: "/school-community-website-interface.png",
       technologies: ["React.js", "Node.js", "MongoDB", "Tailwind CSS"],
     },
-  ]
+  ];
 
   return (
-    <section id="projects" className="bg-sidebar text-sidebar-foreground section-padding">
+    <section
+      id="projects"
+      className="bg-sidebar text-sidebar-foreground section-padding"
+    >
       <div className="container-max">
         <div className="text-center mb-16">
-          <h2 className="font-serif font-black text-3xl md:text-4xl mb-4">My Projects</h2>
+          <h2 className="font-serif font-black text-3xl md:text-4xl mb-4">
+            My Projects
+          </h2>
           <p className="text-sidebar-foreground/80 text-lg max-w-2xl mx-auto">
-            Berikut adalah beberapa proyek yang telah saya kerjakan dalam bidang robotika dan pengembangan web
+            Berikut adalah beberapa proyek yang telah saya kerjakan dalam bidang
+            robotika dan pengembangan web
           </p>
         </div>
 
@@ -80,11 +87,15 @@ export default function ProjectsSection() {
               </div>
 
               <CardHeader>
-                <CardTitle className="font-serif font-bold text-xl text-card-foreground">{project.title}</CardTitle>
+                <CardTitle className="font-serif font-bold text-xl text-card-foreground">
+                  {project.title}
+                </CardTitle>
               </CardHeader>
 
               <CardContent className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">{project.description}</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  {project.description}
+                </p>
 
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, techIndex) => (
@@ -110,5 +121,5 @@ export default function ProjectsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

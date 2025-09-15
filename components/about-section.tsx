@@ -48,7 +48,7 @@ export default function AboutSection() {
           <div className="flex justify-center">
             <div className="w-64 h-64 rounded-full bg-muted flex items-center justify-center">
               <img
-                src="/professional-portrait-of-young-tech-student.png"
+                src="/potoig.JPG"
                 alt="M. Ali Yafie Y"
                 className="w-full h-full rounded-full object-cover"
               />
