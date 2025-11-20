@@ -7,7 +7,8 @@ export default function ProjectsSection() {
       title: "Smart Fish Feeder IoT",
       description:
         "Sistem IoT pemberi makan ikan otomatis menggunakan ESP32, RTC, servo, motor DC, dan sensor ultrasonik. Bisa dipantau melalui Blynk.",
-      image: "/smart-fish-feeder.png",
+      image:
+        "/DALL·E 2025-11-20 14.14.54 - A clean and simple landscape-oriented illustration showing an automatic smart fish feeder IoT system. Depict a small fish tank on a table with gentle .webp",
       technologies: ["ESP32", "Blynk", "Ultrasonic", "RTC", "Servo"],
       link: "https://github.com/username/smart-fish-feeder", // <— isi sendiri
     },
@@ -16,7 +17,8 @@ export default function ProjectsSection() {
       title: "Brick Breaker Game on OLED",
       description:
         "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
-      image: "/brick-breaker.png",
+      image:
+        "/DALL·E 2025-11-20 14.15.00 - A clean and simple landscape illustration showing a small Arduino-based Brick Breaker game setup. The scene features an Arduino board connected to a 1.webp",
       technologies: ["Arduino", "OLED", "C++", "Joystick"],
       link: "https://github.com/username/brick-breaker",
     },
@@ -25,7 +27,8 @@ export default function ProjectsSection() {
       title: "Brick Breaker Game on OLED",
       description:
         "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
-      image: "/brick-breaker.png",
+      image:
+        "/DALL·E 2025-11-20 14.15.05 - A simple, clean landscape illustration of an IoT lamp control and DHT monitoring system. Show an ESP32 board connected neatly to a DHT22 temperature a.webp",
       technologies: ["Arduino", "OLED", "C++", "Joystick"],
       link: "https://github.com/username/brick-breaker",
     },
@@ -34,7 +37,7 @@ export default function ProjectsSection() {
       title: "Brick Breaker Game on OLED",
       description:
         "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
-      image: "/brick-breaker.png",
+      image: "/ChatGPT Image 20 Nov 2025, 14.15.19.png",
       technologies: ["Arduino", "OLED", "C++", "Joystick"],
       link: "https://github.com/username/brick-breaker",
     },
@@ -43,7 +46,26 @@ export default function ProjectsSection() {
       title: "Brick Breaker Game on OLED",
       description:
         "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
-      image: "/brick-breaker.png",
+      image: "/ChatGPT Image 20 Nov 2025, 14.16.06.png",
+      technologies: ["Arduino", "OLED", "C++", "Joystick"],
+      link: "https://github.com/username/brick-breaker",
+    },
+    {
+      title: "Smart Fish Feeder IoT",
+      description:
+        "Sistem IoT pemberi makan ikan otomatis menggunakan ESP32, RTC, servo, motor DC, dan sensor ultrasonik. Bisa dipantau melalui Blynk.",
+      image:
+        "/DALL·E 2025-11-20 14.14.54 - A clean and simple landscape-oriented illustration showing an automatic smart fish feeder IoT system. Depict a small fish tank on a table with gentle .webp",
+      technologies: ["ESP32", "Blynk", "Ultrasonic", "RTC", "Servo"],
+      link: "https://github.com/username/smart-fish-feeder", // <— isi sendiri
+    },
+
+    {
+      title: "Brick Breaker Game on OLED",
+      description:
+        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
+      image:
+        "/DALL·E 2025-11-20 14.15.00 - A clean and simple landscape illustration showing a small Arduino-based Brick Breaker game setup. The scene features an Arduino board connected to a 1.webp",
       technologies: ["Arduino", "OLED", "C++", "Joystick"],
       link: "https://github.com/username/brick-breaker",
     },
@@ -52,7 +74,8 @@ export default function ProjectsSection() {
       title: "Brick Breaker Game on OLED",
       description:
         "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
-      image: "/brick-breaker.png",
+      image:
+        "/DALL·E 2025-11-20 14.15.05 - A simple, clean landscape illustration of an IoT lamp control and DHT monitoring system. Show an ESP32 board connected neatly to a DHT22 temperature a.webp",
       technologies: ["Arduino", "OLED", "C++", "Joystick"],
       link: "https://github.com/username/brick-breaker",
     },
@@ -61,79 +84,7 @@ export default function ProjectsSection() {
       title: "Brick Breaker Game on OLED",
       description:
         "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
-      image: "/brick-breaker.png",
-      technologies: ["Arduino", "OLED", "C++", "Joystick"],
-      link: "https://github.com/username/brick-breaker",
-    },
-
-    {
-      title: "Brick Breaker Game on OLED",
-      description:
-        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
-      image: "/brick-breaker.png",
-      technologies: ["Arduino", "OLED", "C++", "Joystick"],
-      link: "https://github.com/username/brick-breaker",
-    },
-
-    {
-      title: "Brick Breaker Game on OLED",
-      description:
-        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
-      image: "/brick-breaker.png",
-      technologies: ["Arduino", "OLED", "C++", "Joystick"],
-      link: "https://github.com/username/brick-breaker",
-    },
-
-    {
-      title: "Brick Breaker Game on OLED",
-      description:
-        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
-      image: "/brick-breaker.png",
-      technologies: ["Arduino", "OLED", "C++", "Joystick"],
-      link: "https://github.com/username/brick-breaker",
-    },
-
-    {
-      title: "Brick Breaker Game on OLED",
-      description:
-        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
-      image: "/brick-breaker.png",
-      technologies: ["Arduino", "OLED", "C++", "Joystick"],
-      link: "https://github.com/username/brick-breaker",
-    },
-
-    {
-      title: "Brick Breaker Game on OLED",
-      description:
-        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
-      image: "/brick-breaker.png",
-      technologies: ["Arduino", "OLED", "C++", "Joystick"],
-      link: "https://github.com/username/brick-breaker",
-    },
-
-    {
-      title: "Brick Breaker Game on OLED",
-      description:
-        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
-      image: "/brick-breaker.png",
-      technologies: ["Arduino", "OLED", "C++", "Joystick"],
-      link: "https://github.com/username/brick-breaker",
-    },
-
-    {
-      title: "Brick Breaker Game on OLED",
-      description:
-        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
-      image: "/brick-breaker.png",
-      technologies: ["Arduino", "OLED", "C++", "Joystick"],
-      link: "https://github.com/username/brick-breaker",
-    },
-
-    {
-      title: "Brick Breaker Game on OLED",
-      description:
-        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
-      image: "/brick-breaker.png",
+      image: "/ChatGPT Image 20 Nov 2025, 14.15.19.png",
       technologies: ["Arduino", "OLED", "C++", "Joystick"],
       link: "https://github.com/username/brick-breaker",
     },
