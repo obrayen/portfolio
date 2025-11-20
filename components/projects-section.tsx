@@ -10,7 +10,7 @@ export default function ProjectsSection() {
       image:
         "/DALL·E 2025-11-20 14.14.54 - A clean and simple landscape-oriented illustration showing an automatic smart fish feeder IoT system. Depict a small fish tank on a table with gentle .webp",
       technologies: ["ESP32", "Blynk", "Ultrasonic", "RTC", "Servo"],
-      link: "https://github.com/username/smart-fish-feeder", // <— isi sendiri
+      link: "https://wokwi.com/projects/446430947868176385", // <— isi sendiri
     },
 
     {
@@ -20,13 +20,13 @@ export default function ProjectsSection() {
       image:
         "/DALL·E 2025-11-20 14.15.00 - A clean and simple landscape illustration showing a small Arduino-based Brick Breaker game setup. The scene features an Arduino board connected to a 1.webp",
       technologies: ["Arduino", "OLED", "C++", "Joystick"],
-      link: "https://github.com/username/brick-breaker",
+      link: "https://line-following-robot.willdonaldson.io/en/latest/index.html",
     },
 
     {
-      title: "Brick Breaker Game on OLED",
+      title: "IoT Lamp Control + DHT Monitoring",
       description:
-        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
+        "Kontrol lampu dan monitoring suhu/kelembapan melalui MQTT dan dashboard web. Menggunakan ESP32 dan DHT22.",
       image:
         "/DALL·E 2025-11-20 14.15.05 - A simple, clean landscape illustration of an IoT lamp control and DHT monitoring system. Show an ESP32 board connected neatly to a DHT22 temperature a.webp",
       technologies: ["Arduino", "OLED", "C++", "Joystick"],
@@ -43,9 +43,9 @@ export default function ProjectsSection() {
     },
 
     {
-      title: "Brick Breaker Game on OLED",
+      title: "Storage Web App",
       description:
-        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
+        "Aplikasi web penyimpanan file & link dokumen menggunakan Laravel Blade. Fitur input judul, deskripsi, dan waktu otomatis.",
       image: "/ChatGPT Image 20 Nov 2025, 14.16.06.png",
       technologies: ["Arduino", "OLED", "C++", "Joystick"],
       link: "https://github.com/username/brick-breaker",

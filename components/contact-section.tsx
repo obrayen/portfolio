@@ -32,10 +32,10 @@ export default function ContactSection() {
   }
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
+    { icon: Github, href: "https://github.com/obrayen", label: "GitHub" },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Mail, href: "mailto:aliyafie@example.com", label: "Email" },
+    { icon: Instagram, href: "https://www.instagram.com/_4aliyafie/", label: "Instagram" },
+    { icon: Mail, href: "smktibazmamali@gmail.com", label: "Email" },
   ]
 
   return (
