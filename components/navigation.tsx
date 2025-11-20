@@ -29,7 +29,7 @@ export default function Navigation() {
     >
       <div className="container-max">
         <div className="flex items-center justify-between h-16">
-          <div className="font-serif font-black text-2xl text-primary">MAY</div>
+          <div className="font-serif font-white text-2xl text-primary">MAY</div>
 
           <div className="hidden md:flex items-center space-x-8">
             {["Home", "About", "Projects", "Skills", "Contact"].map((item) => (

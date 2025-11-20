@@ -4,14 +4,7 @@ import { ExternalLink } from "lucide-react";
 
 export default function ProjectsSection() {
   const projects = [
-    {
-      title: "Mesin Absensi Arduino",
-      description:
-        "Mesin absensi otomatis berbasis ESP32 dengan sensor RFID untuk mencatat kehadiran secara cepat dan akurat.",
-      image: "/arduino-attendance-machine.png",
-      technologies: [
-        "Arduino","C++","RFID","Fingerprint Sensor","LCD/OLED",],
-    },
+    
     {
       title: "Smart Home Automation",
       description:

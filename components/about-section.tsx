@@ -29,8 +29,8 @@ export default function AboutSection() {
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Halo! Saya M. Ali Yafie Y, sekarang sekolah di SMK TI Bazma, jurusan Teknologi Informasi. Saya menyukai
-                teknisi dan masuk ke dunia robotik, menjadi ketua di sana.
+                Halo! Saya M. Ali Yafie Y, sekarang sekolah di SMK TI Bazma, jurusan Sistem Informatika Jaringan dan Aplikasi. Saya menyukai
+                teknisi dan masuk ke dunia robotik dan menjadi ketua di sana.
               </p>
 
               <p>
@@ -48,7 +48,7 @@ export default function AboutSection() {
           <div className="flex justify-center">
             <div className="w-64 h-64 rounded-full bg-muted flex items-center justify-center">
               <img
-                src="/potoig.JPG"
+                src="/WhatsApp Image 2025-11-20 at 11.13.04.jpeg"
                 alt="M. Ali Yafie Y"
                 className="w-full h-full rounded-full object-cover"
               />
