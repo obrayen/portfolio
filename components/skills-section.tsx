@@ -2,7 +2,7 @@ import { Progress } from "@/components/ui/progress"
 
 export default function SkillsSection() {
   const skills = [
-    { name: "React.js", level: 20, category: "Web Development" },
+    { name: "React.js", level: 50, category: "Web Development" },
     { name: "Arduino", level: 90, category: "Robotics" },
     { name: "HTML/CSS", level: 85, category: "Web Development" },
     { name: "ESP32", level: 85, category: "IoT" },

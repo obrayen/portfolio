@@ -6,7 +6,7 @@ export default function ExperienceSection() {
     {
       title: "Ketua Robotika Ekstrakurikuler",
       organization: "SMK TI Bazma",
-      period: "Juni 2024 - Sekarang",
+      period: "Juni 2025 - 2026",
       location: "Bogor, Indonesia",
       description:
         "Memimpin tim robotika sekolah, mengorganisir kompetisi, dan mengembangkan kurikulum pembelajaran robotika untuk siswa.",
@@ -22,7 +22,7 @@ export default function ExperienceSection() {
     {
       title: "Mudabbir – Divisi Tata Tertib",
       organization: "SMK TI Bazma",
-      period: "2023 – Sekarang",
+      period: "2025 – 2026",
       location: "Bogor, Indonesia",
       description:
         "Bertanggung jawab menjaga kedisiplinan dan ketertiban asrama, membimbing siswa junior, mengatur rutinitas harian asrama, serta menangani pelanggaran tata tertib untuk menciptakan lingkungan yang aman dan nyaman.",

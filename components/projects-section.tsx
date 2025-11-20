@@ -1,52 +1,144 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
 export default function ProjectsSection() {
   const projects = [
-    
     {
-      title: "Smart Home Automation",
+      title: "Smart Fish Feeder IoT",
       description:
-        "Sistem IoT untuk otomatisasi rumah menggunakan Arduino dan ESP32 dengan kontrol melalui aplikasi mobile.",
-      image: "/smart-home-automation.png",
-      technologies: ["ESP32", "IoT", "Mobile App", "WiFi"],
+        "Sistem IoT pemberi makan ikan otomatis menggunakan ESP32, RTC, servo, motor DC, dan sensor ultrasonik. Bisa dipantau melalui Blynk.",
+      image: "/smart-fish-feeder.png",
+      technologies: ["ESP32", "Blynk", "Ultrasonic", "RTC", "Servo"],
+      link: "https://github.com/username/smart-fish-feeder", // <— isi sendiri
     },
+
     {
-      title: "Smart Home Automation",
+      title: "Brick Breaker Game on OLED",
       description:
-        "Sistem IoT untuk otomatisasi rumah menggunakan Arduino dan ESP32 dengan kontrol melalui aplikasi mobile.",
-      image: "/smart-home-automation.png",
-      technologies: ["ESP32", "IoT", "Mobile App", "WiFi"],
+        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
+      image: "/brick-breaker.png",
+      technologies: ["Arduino", "OLED", "C++", "Joystick"],
+      link: "https://github.com/username/brick-breaker",
     },
+
     {
-      title: "Smart Home Automation",
+      title: "Brick Breaker Game on OLED",
       description:
-        "Sistem IoT untuk otomatisasi rumah menggunakan Arduino dan ESP32 dengan kontrol melalui aplikasi mobile.",
-      image: "/smart-home-automation.png",
-      technologies: ["ESP32", "IoT", "Mobile App", "WiFi"],
+        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
+      image: "/brick-breaker.png",
+      technologies: ["Arduino", "OLED", "C++", "Joystick"],
+      link: "https://github.com/username/brick-breaker",
     },
+
     {
-      title: "Smart Home Automation",
+      title: "Brick Breaker Game on OLED",
       description:
-        "Sistem IoT untuk otomatisasi rumah menggunakan Arduino dan ESP32 dengan kontrol melalui aplikasi mobile.",
-      image: "/smart-home-automation.png",
-      technologies: ["ESP32", "IoT", "Mobile App", "WiFi"],
+        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
+      image: "/brick-breaker.png",
+      technologies: ["Arduino", "OLED", "C++", "Joystick"],
+      link: "https://github.com/username/brick-breaker",
     },
+
     {
-      title: "Smart Home Automation",
+      title: "Brick Breaker Game on OLED",
       description:
-        "Sistem IoT untuk otomatisasi rumah menggunakan Arduino dan ESP32 dengan kontrol melalui aplikasi mobile.",
-      image: "/smart-home-automation.png",
-      technologies: ["ESP32", "IoT", "Mobile App", "WiFi"],
+        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
+      image: "/brick-breaker.png",
+      technologies: ["Arduino", "OLED", "C++", "Joystick"],
+      link: "https://github.com/username/brick-breaker",
     },
+
     {
-      title: "Website Komunitas TI Bazma",
+      title: "Brick Breaker Game on OLED",
       description:
-        "Platform web sederhana untuk anggota komunitas teknologi sekolah dengan fitur forum dan resource sharing.",
-      image: "/school-community-website-interface.png",
-      technologies: ["React.js", "Node.js", "MongoDB", "Tailwind CSS"],
+        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
+      image: "/brick-breaker.png",
+      technologies: ["Arduino", "OLED", "C++", "Joystick"],
+      link: "https://github.com/username/brick-breaker",
     },
+
+    {
+      title: "Brick Breaker Game on OLED",
+      description:
+        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
+      image: "/brick-breaker.png",
+      technologies: ["Arduino", "OLED", "C++", "Joystick"],
+      link: "https://github.com/username/brick-breaker",
+    },
+
+    {
+      title: "Brick Breaker Game on OLED",
+      description:
+        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
+      image: "/brick-breaker.png",
+      technologies: ["Arduino", "OLED", "C++", "Joystick"],
+      link: "https://github.com/username/brick-breaker",
+    },
+
+    {
+      title: "Brick Breaker Game on OLED",
+      description:
+        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
+      image: "/brick-breaker.png",
+      technologies: ["Arduino", "OLED", "C++", "Joystick"],
+      link: "https://github.com/username/brick-breaker",
+    },
+
+    {
+      title: "Brick Breaker Game on OLED",
+      description:
+        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
+      image: "/brick-breaker.png",
+      technologies: ["Arduino", "OLED", "C++", "Joystick"],
+      link: "https://github.com/username/brick-breaker",
+    },
+
+    {
+      title: "Brick Breaker Game on OLED",
+      description:
+        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
+      image: "/brick-breaker.png",
+      technologies: ["Arduino", "OLED", "C++", "Joystick"],
+      link: "https://github.com/username/brick-breaker",
+    },
+
+    {
+      title: "Brick Breaker Game on OLED",
+      description:
+        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
+      image: "/brick-breaker.png",
+      technologies: ["Arduino", "OLED", "C++", "Joystick"],
+      link: "https://github.com/username/brick-breaker",
+    },
+
+    {
+      title: "Brick Breaker Game on OLED",
+      description:
+        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
+      image: "/brick-breaker.png",
+      technologies: ["Arduino", "OLED", "C++", "Joystick"],
+      link: "https://github.com/username/brick-breaker",
+    },
+
+    {
+      title: "Brick Breaker Game on OLED",
+      description:
+        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
+      image: "/brick-breaker.png",
+      technologies: ["Arduino", "OLED", "C++", "Joystick"],
+      link: "https://github.com/username/brick-breaker",
+    },
+
+    {
+      title: "Brick Breaker Game on OLED",
+      description:
+        "Game Brick Breaker berbasis Arduino dengan layar OLED 128x64 dan joystick analog sebagai controller.",
+      image: "/brick-breaker.png",
+      technologies: ["Arduino", "OLED", "C++", "Joystick"],
+      link: "https://github.com/username/brick-breaker",
+    },
+
+    // … sisanya tinggal tambahin link di sini
   ];
 
   return (
@@ -101,13 +193,16 @@ export default function ProjectsSection() {
                   ))}
                 </div>
 
-                <Button
-                  variant="outline"
-                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+                {/* LINK BUTTON */}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center px-4 py-2 border border-sidebar-border rounded-lg group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
                 >
                   View Details
                   <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
+                </a>
               </CardContent>
             </Card>
           ))}
