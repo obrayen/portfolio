@@ -46,7 +46,7 @@ export default function AboutSection() {
           </div>
 
           <div className="flex justify-center">
-            <div className="w-64 h-64 rounded-full bg-muted flex items-center justify-center">
+            <div className="w-80 h-80 rounded-full bg-muted flex items-center justify-center">
               <img
                 src="/WhatsApp Image 2025-11-20 at 11.13.04.jpeg"
                 alt="M. Ali Yafie Y"
