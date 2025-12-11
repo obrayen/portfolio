@@ -49,7 +49,7 @@ export default function AboutSection() {
             <div className="w-80 h-80 rounded-full bg-muted flex items-center justify-center">
               <img
                 src="/WhatsApp Image 2025-11-20 at 11.13.04.jpeg"
-                alt="M. Ali Yafie Y"
+                alt="M. Ali Yafie"
                 className="w-full h-full rounded-full object-cover"
               />
             </div>
