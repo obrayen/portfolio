@@ -5,18 +5,21 @@ export default function AboutSection() {
   const highlights = [
     {
       icon: Cog,
-      title: "Robotik",
-      description: "Ketua ekstrakurikuler robotika dengan pengalaman dalam IoT dan automation",
+      title: "Robotics & IoT",
+      description:
+        "Memimpin tim robotika dan mengembangkan proyek berbasis ESP32, sensor, dan automation system.",
     },
     {
       icon: Monitor,
       title: "Web Development",
-      description: "Pengembangan website dan aplikasi menggunakan teknologi modern",
+      description:
+        "Membangun aplikasi web modern menggunakan React dan Laravel untuk solusi digital yang efisien.",
     },
     {
       icon: Star,
       title: "Leadership",
-      description: "Memimpin tim dan proyek teknologi di lingkungan sekolah",
+      description:
+        "Berpengalaman memimpin tim, mengelola proyek, dan membimbing anggota dalam pengembangan teknologi.",
     },
   ]
 
@@ -24,47 +27,63 @@ export default function AboutSection() {
     <section id="about" className="bg-background section-padding">
       <div className="container-max">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
+          
+          {/* TEXT */}
           <div>
-            <h2 className="font-serif font-black text-3xl md:text-4xl mb-6 text-foreground">About Me</h2>
+            <h2 className="font-serif font-black text-3xl md:text-4xl mb-6 text-foreground">
+              About Me
+            </h2>
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Halo! Saya M. Ali Yafie Y, sekarang sekolah di SMK TI Bazma, jurusan Sistem Informatika Jaringan dan Aplikasi. Saya menyukai
-                teknisi dan masuk ke dunia robotik dan menjadi ketua di sana.
+                Saya adalah siswa SMK TI Bazma jurusan Sistem Informatika Jaringan dan Aplikasi
+                dengan fokus pada pengembangan robotika dan teknologi berbasis IoT.
               </p>
 
               <p>
-                Saya juga aktif dalam pembuatan website dan aplikasi. Saya sudah mengerjakan banyak proyek robotik dan
-                digital yang menggabungkan kreativitas dengan teknologi terdepan.
+                Saat ini saya menjabat sebagai Ketua Ekstrakurikuler Robotika,
+                di mana saya memimpin tim dalam mengembangkan berbagai proyek teknologi
+                dan mengikuti kegiatan kompetisi.
               </p>
 
               <p>
-                Dengan passion yang kuat dalam teknologi dan kepemimpinan, saya terus belajar dan berkembang untuk
-                menciptakan solusi inovatif yang berdampak positif.
+                Selain itu, saya juga aktif dalam pengembangan web menggunakan teknologi modern
+                untuk menciptakan solusi digital yang fungsional dan berdampak.
               </p>
             </div>
           </div>
 
+          {/* IMAGE */}
           <div className="flex justify-center">
-            <div className="w-80 h-80 rounded-full bg-muted flex items-center justify-center">
+            <div className="w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg">
               <img
-                src="/WhatsApp Image 2025-11-20 at 11.13.04.jpeg"
+                src="/ali.jpeg"
                 alt="M. Ali Yafie"
-                className="w-full h-full rounded-full object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
         </div>
 
+        {/* HIGHLIGHTS */}
         <div className="grid md:grid-cols-3 gap-6 mt-16">
           {highlights.map((highlight, index) => (
-            <Card key={index} className="border-border hover:shadow-lg transition-shadow duration-300">
+            <Card
+              key={index}
+              className="border-border hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            >
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <highlight.icon className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="font-serif font-bold text-xl mb-2 text-foreground">{highlight.title}</h3>
-                <p className="text-muted-foreground">{highlight.description}</p>
+
+                <h3 className="font-serif font-bold text-xl mb-2 text-foreground">
+                  {highlight.title}
+                </h3>
+
+                <p className="text-muted-foreground text-sm">
+                  {highlight.description}
+                </p>
               </CardContent>
             </Card>
           ))}
