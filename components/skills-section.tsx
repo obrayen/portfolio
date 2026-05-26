@@ -40,25 +40,36 @@ export default function SkillsSection() {
   const categories = [...new Set(skills.map((s) => s.category))]
 
   return (
-    <section id="skills" className="bg-slate-950 py-20 px-4 md:px-8">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">
-          Skills
-        </h2>
+    <section id="skills" className="bg-background py-32 border-t border-border/50">
+      <div className="container-max">
+        <div className="mb-20 text-center max-w-2xl mx-auto">
+          <h2 className="text-4xl font-extrabold mb-6 text-foreground tracking-tight">
+            Technical Skills
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed font-light">
+            Keahlian teknis yang saya kuasai dalam pengembangan sistem terintegrasi dan aplikasi web.
+          </p>
+        </div>
 
-        <div className="space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16">
           {categories.map((category) => (
-            <div key={category}>
-              <h3 className="text-slate-400 text-sm font-medium mb-4 uppercase tracking-wider">
-                {category}
-              </h3>
-              <div className="flex flex-wrap gap-3">
+            <div 
+              key={category} 
+              className="flex flex-col"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-8 h-px bg-primary/20" />
+                <h3 className="text-foreground text-sm font-bold uppercase tracking-widest">
+                  {category}
+                </h3>
+              </div>
+              <div className="flex flex-wrap gap-2.5">
                 {skills
                   .filter((s) => s.category === category)
                   .map((skill) => (
                     <span
                       key={skill.name}
-                      className="px-5 py-2.5 bg-amber-400 hover:bg-amber-300 text-slate-950 rounded-lg text-sm font-semibold transition-colors duration-200 cursor-default"
+                      className="px-4 py-2 bg-secondary/50 text-foreground/80 font-medium rounded-full text-sm border border-border/50 hover:border-primary/30 hover:bg-secondary transition-colors cursor-default shadow-sm"
                     >
                       {skill.name}
                     </span>

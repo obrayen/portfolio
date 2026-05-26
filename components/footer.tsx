@@ -11,15 +11,16 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-sidebar text-sidebar-foreground py-10">
+    <footer className="bg-background pt-20 pb-12 border-t border-border/40">
       <div className="container-max">
-        
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           
           {/* LEFT */}
           <div className="text-center md:text-left">
-            <h3 className="font-serif font-bold text-lg">M. Ali Yafie Y</h3>
-            <p className="text-sidebar-foreground/70 text-sm">
+            <h3 className="font-bold text-xl tracking-tight mb-2 text-foreground">
+              ali<span className="text-primary">.dev</span>
+            </h3>
+            <p className="text-muted-foreground text-sm font-light">
               Robotics • IoT • Web Developer
             </p>
           </div>
@@ -32,17 +33,22 @@ export default function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full bg-sidebar-foreground/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-secondary/50 text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                aria-label={`Visit my ${social.icon.name}`}
               >
-                <social.icon className="h-5 w-5" />
+                <social.icon className="h-4 w-4" />
               </a>
             ))}
           </div>
         </div>
 
         {/* BOTTOM */}
-        <div className="mt-6 border-t border-sidebar-foreground/10 pt-6 text-center text-sm text-sidebar-foreground/60">
-          © {year} M. Ali Yafie Y. All rights reserved.
+        <div className="mt-16 pt-8 border-t border-border/40 text-sm text-muted-foreground flex flex-col md:flex-row justify-between items-center gap-4 font-light">
+          <p>© {year} M. Ali Yafie Y. All rights reserved.</p>
+          <p className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            Based in Bogor, Indonesia
+          </p>
         </div>
       </div>
     </footer>

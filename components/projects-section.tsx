@@ -1,5 +1,9 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+"use client"
+
+import { useState } from "react"
+import { Card } from "@/components/ui/card"
 import { ExternalLink } from "lucide-react"
+import Image from "next/image"
 
 type Project = {
   title: string
@@ -9,6 +13,71 @@ type Project = {
   link: string
   category: string
   highlight?: boolean
+}
+
+const ProjectCard = ({ project }: { project: Project }) => {
+  const [imgSrc, setImgSrc] = useState(
+    project.image.startsWith('/') || project.image.startsWith('http') 
+      ? project.image 
+      : `/${project.image}`
+  )
+
+  return (
+    <Card className="group bg-card border-border/40 hover:border-border transition-all duration-500 overflow-hidden flex flex-col h-full rounded-2xl shadow-sm hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1">
+      {/* IMAGE */}
+      <div className="relative h-56 w-full overflow-hidden bg-secondary/50">
+        <div className="absolute inset-0 bg-primary/5 mix-blend-multiply group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none" />
+        <Image
+          src={imgSrc}
+          alt={project.title}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          onError={() => {
+            setImgSrc('https://placehold.co/600x400/f1f5f9/94a3b8?text=Project+Image')
+          }}
+        />
+      </div>
+
+      <div className="p-8 flex-1 flex flex-col bg-card relative z-20">
+        <div className="mb-4">
+          <span className="text-[11px] font-semibold tracking-widest text-primary uppercase mb-2 block">
+            {project.category}
+          </span>
+          <h3 className="text-xl font-bold mt-1 text-foreground group-hover:text-primary transition-colors line-clamp-2 leading-tight">
+            {project.title}
+          </h3>
+        </div>
+
+        <p className="text-muted-foreground text-sm leading-relaxed mb-8 flex-1 line-clamp-3 font-light">
+          {project.description}
+        </p>
+
+        {/* TECHNOLOGIES */}
+        <div className="flex flex-wrap gap-2 mb-8">
+          {project.technologies.map((tech, i) => (
+            <span
+              key={i}
+              className="px-2.5 py-1 bg-secondary/70 text-secondary-foreground text-xs font-medium rounded-full"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        {/* BUTTON */}
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center text-sm font-semibold text-primary hover:text-primary/80 transition-colors mt-auto group/link w-fit"
+        >
+          View Project
+          <ExternalLink className="ml-1.5 h-4 w-4 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+        </a>
+      </div>
+    </Card>
+  )
 }
 
 export default function ProjectsSection() {
@@ -81,76 +150,22 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="bg-sidebar text-sidebar-foreground section-padding"
+      className="bg-secondary/30 py-32 border-t border-border/50"
     >
       <div className="container-max">
-        <div className="text-center mb-16">
-          <h2 className="font-serif font-black text-3xl md:text-4xl mb-4">
+        <div className="mb-20 text-center max-w-2xl mx-auto">
+          <h2 className="text-4xl font-extrabold mb-6 tracking-tight text-foreground">
             Featured Projects
           </h2>
-
-          <p className="text-sidebar-foreground/80 text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg leading-relaxed font-light">
             Dokumentasi proyek IoT, embedded system, computer vision, dan web
             development yang telah saya kembangkan.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card
-              key={index}
-              className={`group bg-card border-sidebar-border transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 ${
-                project.highlight ? "ring-2 ring-primary" : ""
-              }`}
-            >
-              {/* IMAGE */}
-              <div className="overflow-hidden rounded-t-lg">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-
-              <CardHeader>
-                <CardTitle className="font-serif font-bold text-xl">
-                  {project.title}
-                </CardTitle>
-
-                <p className="text-xs text-primary font-medium">
-                  {project.category}
-                </p>
-              </CardHeader>
-
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {project.description}
-                </p>
-
-                {/* TECHNOLOGIES */}
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {/* BUTTON */}
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center px-4 py-2 border border-sidebar-border rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
-                >
-                  View Project
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </a>
-              </CardContent>
-            </Card>
+            <ProjectCard key={index} project={project} />
           ))}
         </div>
       </div>

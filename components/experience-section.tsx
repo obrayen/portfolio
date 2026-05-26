@@ -1,5 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Calendar, MapPin, Trophy } from "lucide-react"
+import { MapPin, Trophy } from "lucide-react"
 
 type Experience = {
   title: string
@@ -67,56 +66,50 @@ export default function ExperienceSection() {
   ]
 
   return (
-    <section className="bg-muted/30 section-padding">
+    <section className="bg-secondary/30 py-32 border-t border-border/50">
       <div className="container-max">
-        <div className="text-center mb-16">
-          <h2 className="font-serif font-black text-3xl md:text-4xl mb-4 text-foreground">
+        <div className="mb-20 max-w-2xl">
+          <h2 className="text-4xl font-extrabold mb-6 text-foreground tracking-tight">
             Experience
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Pengalaman dalam kepemimpinan, kompetisi, pengajaran, dan pengembangan sistem teknologi
+          <p className="text-muted-foreground text-lg font-light leading-relaxed">
+            Perjalanan dalam kepemimpinan, kompetisi, pengajaran, dan pengembangan sistem teknologi.
           </p>
         </div>
 
-        <div className="space-y-6 max-w-4xl mx-auto">
+        <div className="space-y-12 max-w-4xl relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-border/80 before:to-transparent">
           {experiences.map((experience, index) => (
-            <Card
-              key={index}
-              className={`border-border transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
-                experience.highlight ? "ring-2 ring-primary" : ""
-              }`}
-            >
-              <CardHeader>
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-                  <CardTitle className="font-serif font-bold text-xl text-foreground flex items-center gap-2">
-                    {experience.title}
-                    {experience.highlight && (
-                      <Trophy className="h-4 w-4 text-primary" />
-                    )}
-                  </CardTitle>
-
-                  <div className="flex items-center text-muted-foreground text-sm">
-                    <Calendar className="h-4 w-4 mr-1" />
-                    {experience.period}
+            <div key={index} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+              
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-background bg-secondary/80 text-primary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300 relative z-10">
+                {experience.highlight ? <Trophy className="w-4 h-4" /> : <div className="w-2 h-2 rounded-full bg-current" />}
+              </div>
+              
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-card p-6 rounded-2xl shadow-sm border border-border/40 hover:border-border transition-colors duration-300">
+                <div className="flex flex-col gap-2">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+                    <h3 className="text-lg font-bold text-foreground">
+                      {experience.title}
+                    </h3>
+                    <span className="inline-flex items-center justify-center px-2.5 py-1 text-xs font-medium bg-secondary text-secondary-foreground rounded-full whitespace-nowrap">
+                      {experience.period}
+                    </span>
                   </div>
-                </div>
-
-                <div className="flex items-center text-primary font-medium">
-                  <span>{experience.organization}</span>
-                  <span className="mx-2">•</span>
-                  <div className="flex items-center">
-                    <MapPin className="h-4 w-4 mr-1" />
-                    {experience.location}
+                  <div className="flex items-center text-sm font-medium text-foreground/80 mb-3">
+                    {experience.organization}
+                    <span className="mx-2 text-muted-foreground">•</span>
+                    <span className="text-muted-foreground flex items-center gap-1 font-light">
+                      <MapPin className="w-3.5 h-3.5" />
+                      {experience.location}
+                    </span>
                   </div>
+                  <p className="text-muted-foreground leading-relaxed text-sm font-light">
+                    {experience.description}
+                  </p>
                 </div>
-              </CardHeader>
+              </div>
 
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed text-sm">
-                  {experience.description}
-                </p>
-              </CardContent>
-            </Card>
+            </div>
           ))}
         </div>
       </div>

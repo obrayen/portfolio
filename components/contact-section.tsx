@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Github, Linkedin, Instagram, Mail, Send } from "lucide-react";
 
 export default function ContactSection() {
@@ -55,30 +54,29 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="bg-primary text-primary-foreground section-padding"
+      className="bg-secondary/30 py-32 border-t border-border/50"
     >
       <div className="container-max">
-        <div className="text-center mb-16">
-          <h2 className="font-serif font-black text-3xl md:text-4xl mb-4">
-            Let's Work Together
+        <div className="mb-20 text-center max-w-2xl mx-auto">
+          <h2 className="text-4xl font-extrabold mb-6 tracking-tight text-foreground">
+            Let&apos;s Work Together
           </h2>
-          <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg leading-relaxed font-light">
             Tertarik berkolaborasi dalam proyek robotika atau pengembangan web?
             Hubungi saya dan mari kita bangun sesuatu yang berdampak.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-[1fr_400px] gap-16">
           {/* FORM */}
-          <Card className="bg-primary-foreground/10 border-primary-foreground/20">
-            <CardHeader>
-              <CardTitle className="font-serif font-bold text-2xl text-primary-foreground">
-                Send a Message
-              </CardTitle>
-            </CardHeader>
+          <div className="bg-card border border-border/40 rounded-2xl p-10 shadow-sm">
+            <h3 className="font-bold text-2xl text-foreground mb-8">
+              Send a Message
+            </h3>
 
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="space-y-3">
+                <label className="text-sm font-semibold text-foreground">Name</label>
                 <Input
                   name="name"
                   placeholder="Your Name"
@@ -86,9 +84,12 @@ export default function ContactSection() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/60"
+                  className="bg-background border-border/60 text-foreground h-12 rounded-xl focus-visible:ring-1 focus-visible:ring-primary shadow-sm"
                 />
+              </div>
 
+              <div className="space-y-3">
+                <label className="text-sm font-semibold text-foreground">Email</label>
                 <Input
                   name="email"
                   type="email"
@@ -97,58 +98,62 @@ export default function ContactSection() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/60"
+                  className="bg-background border-border/60 text-foreground h-12 rounded-xl focus-visible:ring-1 focus-visible:ring-primary shadow-sm"
                 />
+              </div>
 
+              <div className="space-y-3">
+                <label className="text-sm font-semibold text-foreground">Message</label>
                 <Textarea
                   name="message"
-                  placeholder="Your Message"
+                  placeholder="How can I help you?"
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={5}
+                  rows={6}
                   disabled={isSubmitting}
-                  className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/60 resize-none"
+                  className="bg-background border-border/60 text-foreground resize-none rounded-xl focus-visible:ring-1 focus-visible:ring-primary shadow-sm"
                 />
+              </div>
 
-                <Button
-                  type="submit"
-                  variant="secondary"
-                  size="lg"
-                  className="w-full"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                  <Send className="ml-2 h-5 w-5" />
-                </Button>
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full rounded-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-14 transition-all shadow-md hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
+                <Send className="ml-2 h-5 w-5" />
+              </Button>
 
-                {isSuccess && (
-                  <p className="text-green-400 text-center text-sm">
-                    Message sent successfully!
-                  </p>
-                )}
-              </form>
-            </CardContent>
-          </Card>
+              {isSuccess && (
+                <p className="text-green-600 dark:text-green-400 text-center text-sm font-medium mt-4 bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
+                  Message sent successfully!
+                </p>
+              )}
+            </form>
+          </div>
 
           {/* SOCIAL */}
-          <div className="space-y-8">
+          <div className="space-y-10">
             <div>
-              <h3 className="font-serif font-bold text-2xl mb-6 text-primary-foreground">
-                Connect with Me
+              <h3 className="font-bold text-2xl mb-8 text-foreground">
+                Connect
               </h3>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-3 p-4 bg-primary-foreground/10 rounded-lg hover:bg-primary-foreground/20 transition-all duration-200 group hover:-translate-y-1"
+                    className="flex items-center space-x-4 p-5 bg-card border border-border/40 rounded-xl hover:border-primary/30 hover:bg-secondary/50 transition-all duration-300 shadow-sm group"
                   >
-                    <social.icon className="h-6 w-6 text-primary-foreground group-hover:text-secondary transition-colors" />
-                    <span className="font-medium text-primary-foreground group-hover:text-secondary transition-colors">
+                    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                      <social.icon className="h-4 w-4 text-muted-foreground group-hover:text-current" />
+                    </div>
+                    <span className="font-semibold text-foreground">
                       {social.label}
                     </span>
                   </a>
@@ -156,11 +161,12 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-primary-foreground/10 rounded-lg p-6">
-              <h4 className="font-serif font-bold text-xl mb-4 text-primary-foreground">
+            <div className="bg-primary text-primary-foreground rounded-2xl p-8 shadow-lg">
+              <h4 className="font-bold text-lg mb-4 flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_rgba(74,222,128,0.6)]" />
                 Open for Opportunities
               </h4>
-              <p className="text-primary-foreground/80 leading-relaxed">
+              <p className="text-primary-foreground/80 text-sm leading-relaxed font-light">
                 Saya terbuka untuk kolaborasi proyek teknologi, pengembangan
                 sistem IoT, maupun pembuatan aplikasi web. Mari wujudkan ide
                 menjadi solusi nyata.
