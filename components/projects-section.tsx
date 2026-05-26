@@ -14,73 +14,84 @@ type Project = {
 export default function ProjectsSection() {
   const projects: Project[] = [
     {
-      title: "Smart Fish Feeder IoT",
+      title: "RFID Attendance System",
       category: "IoT / Embedded System",
       description:
-        "Sistem otomatis pemberi makan ikan berbasis ESP32 yang dapat dikontrol dan dipantau menggunakan Blynk secara real-time.",
-      image: "/projects/fish-feeder.jpg",
-      technologies: ["ESP32", "Blynk", "Servo", "Ultrasonic Sensor"],
-      link: "#",
+        "Mengembangkan sistem absensi berbasis RFID untuk identifikasi pengguna secara otomatis sehingga meningkatkan akurasi pencatatan dan mengurangi kesalahan manual.",
+      image: "rfid.jpg",
+      technologies: ["Arduino", "RFID RC522", "LCD Display"],
+      link: "https://drive.google.com/drive/folders/1A4sjdTX9_4X_4FxcAJ8LMUL5SOIPx4w1?usp=sharing",
       highlight: true,
     },
+
     {
-      title: "IoT Lamp Control & Monitoring System",
-      category: "IoT / Smart Home",
+      title: "Smart Fish Feeder System",
+      category: "IoT / Automation",
       description:
-        "Sistem kontrol lampu dan monitoring suhu serta kelembaban berbasis ESP32 dengan komunikasi MQTT real-time.",
-      image: "/projects/iot-lamp.jpg",
-      technologies: ["ESP32", "MQTT", "DHT22"],
-      link: "#",
+        "Mengembangkan sistem pemberi makan ikan otomatis berbasis Arduino dan ESP32 dengan fitur penjadwalan waktu untuk meningkatkan efisiensi dan konsistensi pemberian pakan.",
+      image: "pakanikan.png",
+      technologies: ["ESP32", "Arduino", "RTC Module", "Servo Motor"],
+      link: "https://drive.google.com/drive/folders/11Cn9UWNp9rO9bjnq4bYkszm0SBNd5JCb?usp=sharing",
       highlight: true,
     },
+
     {
-      title: "Brick Breaker Game (OLED Arduino)",
-      category: "Embedded System / Game",
+      title: "IoT Smart Lighting & Environment Monitoring",
+      category: "IoT / Smart System",
       description:
-        "Game berbasis Arduino menggunakan OLED display dan joystick sebagai kontrol utama.",
-      image: "/projects/brick-breaker.jpg",
-      technologies: ["Arduino", "OLED", "C++", "Joystick"],
-      link: "#",
+        "Mengembangkan sistem IoT berbasis web untuk kontrol pencahayaan serta monitoring suhu dan kelembaban secara real-time menggunakan ESP32.",
+      image: "/projects/iot-lighting.jpg",
+      technologies: ["ESP32", "MQTT", "DHT22", "Web Dashboard"],
+      link: "https://drive.google.com/drive/folders/1O5bbXcM-YY76fNC7Z7waQKwNoNKAeHAh?usp=drive_link",
+      highlight: true,
     },
+
+    {
+      title: "LED Matrix P10 Digital Clock",
+      category: "Embedded System",
+      description:
+        "Mengembangkan jam digital berbasis LED Matrix P10 dengan tampilan waktu real-time yang stabil dan mudah dibaca untuk penggunaan berkelanjutan.",
+      image: "p10.jpg",
+      technologies: ["Arduino", "P10 Display", "RTC Module"],
+      link: "https://drive.google.com/drive/folders/1FqFko3TVvhSAF7WdjBJlR_EDj_X2mvx8?usp=drive_link",
+    },
+
+    {
+      title: "OpenCV RC Control System",
+      category: "AI / Computer Vision",
+      description:
+        "Mengembangkan sistem kendali RC berbasis OpenCV untuk mendeteksi dan memproses objek secara real-time sehingga meningkatkan kemampuan otomatisasi dan kontrol visual.",
+      image: "rcopencv.jpg",
+      technologies: ["Python", "OpenCV", "ESP32", "WiFi"],
+      link: "https://drive.google.com/drive/folders/1wYb2oBknYv8mqxcBuUkd4A1Wk9W1WY4C?usp=sharing",
+      highlight: true,
+    },
+
     {
       title: "Storage Web App",
       category: "Web Development",
       description:
-        "Aplikasi web penyimpanan file dan link menggunakan Laravel Blade dengan fitur input data dan timestamp otomatis.",
-      image: "/projects/storage-web.jpg",
+        "Membangun aplikasi web penyimpanan file dan link menggunakan Laravel Blade dengan fitur upload file, deskripsi, dan timestamp otomatis.",
+      image: "webstorage.png",
       technologies: ["Laravel", "Blade", "PHP", "MySQL"],
-      link: "#",
-      highlight: true,
-    },
-    {
-      title: "Line Following Robot",
-      category: "Robotics",
-      description:
-        "Robot pengikut garis sebagai dasar pembelajaran sensor IR dan kontrol motor dalam sistem robotika.",
-      image: "/projects/line-follower.jpg",
-      technologies: ["Arduino", "IR Sensor", "DC Motor"],
-      link: "#",
-    },
-    {
-      title: "Computer Vision Experiment",
-      category: "AI / Vision",
-      description:
-        "Eksperimen awal computer vision untuk integrasi sistem pengenalan objek pada robotika.",
-      image: "/projects/cv-experiment.jpg",
-      technologies: ["OpenCV", "Python", "Arduino"],
-      link: "#",
+      link: "https://mystorages.vercel.app/",
     },
   ]
 
   return (
-    <section id="projects" className="bg-sidebar text-sidebar-foreground section-padding">
+    <section
+      id="projects"
+      className="bg-sidebar text-sidebar-foreground section-padding"
+    >
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="font-serif font-black text-3xl md:text-4xl mb-4">
             Featured Projects
           </h2>
+
           <p className="text-sidebar-foreground/80 text-lg max-w-2xl mx-auto">
-            Dokumentasi proyek IoT, robotika, embedded system, dan web development
+            Dokumentasi proyek IoT, embedded system, computer vision, dan web
+            development yang telah saya kembangkan.
           </p>
         </div>
 
@@ -105,7 +116,8 @@ export default function ProjectsSection() {
                 <CardTitle className="font-serif font-bold text-xl">
                   {project.title}
                 </CardTitle>
-                <p className="text-xs text-muted-foreground">
+
+                <p className="text-xs text-primary font-medium">
                   {project.category}
                 </p>
               </CardHeader>
@@ -115,6 +127,7 @@ export default function ProjectsSection() {
                   {project.description}
                 </p>
 
+                {/* TECHNOLOGIES */}
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, i) => (
                     <span
@@ -126,6 +139,7 @@ export default function ProjectsSection() {
                   ))}
                 </div>
 
+                {/* BUTTON */}
                 <a
                   href={project.link}
                   target="_blank"

@@ -6,71 +6,59 @@ type Skill = {
 
 export default function SkillsSection() {
   const skills: Skill[] = [
-    // ROBOTICS / IOT (utama lu)
-    { name: "Arduino", category: "", highlight: true },
-    { name: "ESP32", category: "", highlight: true },
-    { name: "Ultrasonic Sensor", category: "" },
-    { name: "Servo Motor", category: "" },
-    { name: "MQTT", category: "" },
-    { name: "Blynk", category: "" },
+    // ROBOTICS & IoT
+    { name: "Arduino", category: "Robotics & IoT" },
+    { name: "ESP32", category: "Robotics & IoT" },
+    { name: "Ultrasonic Sensor", category: "Robotics & IoT" },
+    { name: "Servo Motor", category: "Robotics & IoT" },
+    { name: "MQTT", category: "Robotics & IoT" },
+    { name: "Blynk", category: "Robotics & IoT" },
+    { name: "Sensor Integration (RFID & DHT)", category: "Robotics & IoT" },
+    { name: "LED Matrix P10", category: "Robotics & IoT" },
+    { name: "Automation & Scheduling", category: "Robotics & IoT" },
 
     // PROGRAMMING
-    { name: "C++", category: "" },
+    { name: "C++", category: "Programming" },
+    { name: "Python", category: "Programming" },
+    { name: "Embedded Systems", category: "Programming" },
 
-    // WEB
-    { name: "HTML", category: "" },
-    { name: "CSS", category: "" },
-    { name: "Tailwind CSS", category: "" },
-    { name: "React.js", category: "" },
-    { name: "Laravel", category: "" },
+    // WEB DEVELOPMENT
+    { name: "HTML", category: "Web Development" },
+    { name: "CSS", category: "Web Development" },
+    { name: "Tailwind CSS", category: "Web Development" },
+    { name: "React.js", category: "Web Development" },
+    { name: "Laravel", category: "Web Development" },
+    { name: "Database Management", category: "Web Development" },
 
-    // AI / CV
-    { name: "Python", category: "" },
-    { name: "OpenCV", category: "" },
-    { name: "MediaPipe", category: "" },
-
-    // SOFT SKILL
-    { name: "Leadership", category: "" },
-    { name: "Teamwork", category: "" },
-    { name: "Problem Solving", category: "" },
+    // AI & COMPUTER VISION
+    { name: "OpenCV", category: "AI & Computer Vision" },
+    { name: "MediaPipe", category: "AI & Computer Vision" },
+    { name: "Object Detection", category: "AI & Computer Vision" },
+    { name: "Real-time Image Processing", category: "AI & Computer Vision" },
   ]
 
   const categories = [...new Set(skills.map((s) => s.category))]
 
   return (
-    <section id="skills" className="bg-background section-padding">
-      <div className="container-max">
-        <div className="text-center mb-16">
-          <h2 className="font-serif font-black text-3xl md:text-4xl mb-4">
-            Skills
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Teknologi dan tools yang saya gunakan dalam proyek robotika dan web
-          </p>
-        </div>
+    <section id="skills" className="bg-slate-950 py-20 px-4 md:px-8">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">
+          Skills
+        </h2>
 
-        <div className="space-y-10 max-w-4xl mx-auto">
+        <div className="space-y-8">
           {categories.map((category) => (
             <div key={category}>
-              <h3 className="font-semibold text-lg mb-4 text-foreground">
+              <h3 className="text-slate-400 text-sm font-medium mb-4 uppercase tracking-wider">
                 {category}
               </h3>
-
               <div className="flex flex-wrap gap-3">
                 {skills
                   .filter((s) => s.category === category)
                   .map((skill) => (
                     <span
                       key={skill.name}
-                      className={`
-                        px-4 py-2 rounded-full text-sm font-medium transition
-                        ${
-                          skill.highlight
-                            ? "bg-primary text-primary-foreground"
-                            : "bg-yellow-400 text-black"
-                        }
-                        hover:scale-105
-                      `}
+                      className="px-5 py-2.5 bg-amber-400 hover:bg-amber-300 text-slate-950 rounded-lg text-sm font-semibold transition-colors duration-200 cursor-default"
                     >
                       {skill.name}
                     </span>
