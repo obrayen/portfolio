@@ -104,16 +104,6 @@ export default function ProjectsSection() {
       highlight: true,
     },
 
-    {
-      title: "IoT Smart Lighting & Environment Monitoring",
-      category: "IoT / Smart System",
-      description:
-        "Mengembangkan sistem IoT berbasis web untuk kontrol pencahayaan serta monitoring suhu dan kelembaban secara real-time menggunakan ESP32.",
-      image: "/projects/iot-lighting.jpg",
-      technologies: ["ESP32", "MQTT", "DHT22", "Web Dashboard"],
-      link: "https://drive.google.com/drive/folders/1O5bbXcM-YY76fNC7Z7waQKwNoNKAeHAh?usp=drive_link",
-      highlight: true,
-    },
 
     {
       title: "LED Matrix P10 Digital Clock",

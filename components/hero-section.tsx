@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, ChevronDown } from "lucide-react"
+import { ArrowRight, ChevronDown, Download } from "lucide-react"
 
 export default function HeroSection() {
   const scrollToProjects = () => {
@@ -62,6 +62,18 @@ export default function HeroSection() {
               className="text-base px-8 h-14 rounded-full font-medium border-border/60 bg-white/50 backdrop-blur-sm text-foreground hover:bg-secondary transition-all hover:-translate-y-0.5"
             >
               Contact Me
+            </Button>
+
+            <Button
+              asChild
+              size="lg"
+              variant="secondary"
+              className="text-base px-8 h-14 rounded-full font-medium transition-all hover:-translate-y-0.5"
+            >
+              <a href="./" download>
+                Download CV
+                <Download className="ml-2 h-5 w-5" />
+              </a>
             </Button>
           </div>
         </div>
